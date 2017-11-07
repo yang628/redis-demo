@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+target/
+*.DS_Store
+.idea/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+.settings/
+/bin
+*.tar
+*.tar.gz
+*.zip
