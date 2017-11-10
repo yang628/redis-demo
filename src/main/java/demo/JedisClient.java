@@ -58,18 +58,16 @@ public class JedisClient {
 		pool.close();
 	}
 
+	/**
+	 * 集群
+	 */
 	@Test
 	public void jedisCluster() {
 		// 创建jedisCluster
 		Set<HostAndPort> nodes = new HashSet<HostAndPort>();
-		nodes.add(new HostAndPort("192.168.242.137", 7001));
-		nodes.add(new HostAndPort("192.168.242.137", 7002));
-		nodes.add(new HostAndPort("192.168.242.137", 7003));
-		nodes.add(new HostAndPort("192.168.242.137", 7004));
-		nodes.add(new HostAndPort("192.168.242.137", 7005));
-		nodes.add(new HostAndPort("192.168.242.137", 7006));
-		nodes.add(new HostAndPort("192.168.242.137", 7007));
-
+		nodes.add(new HostAndPort("10.211.55.5", 6379));
+		nodes.add(new HostAndPort("10.211.55.6", 6379));
+		nodes.add(new HostAndPort("10.211.55.8", 6379));
 		JedisCluster cluster = new JedisCluster(nodes);
 
 		cluster.set("s4", "444");
